@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <title>Login</title>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="CategoriesMenu" runat="server">
 </asp:Content>
@@ -25,7 +26,11 @@
 				
 						<asp:TextBox runat="server" ID="txtEmail" type="text" class="text" placeholder="Email Adress" required=""></asp:TextBox>
 						<asp:TextBox runat="server" ID="txtPassword" type="password"  placeholder="Password" required=""></asp:TextBox>
-						<div class="col-sm-4"></div> 
+                    <div class="checkboxFive">
+                    <asp:CheckBox ID="chk_RememberMe" type="checkbox" runat="server" />
+                    <asp:Label ID="lbl_RememberMe" runat="server" Text="RememberMe"></asp:Label>	
+                    </div>
+                    <div class="col-sm-4"></div> 
                         <label class="col-sm-4 hvr-sweep-to-right">
 				           	<asp:Button runat="server" ID="btnLogin" Text="Login" type="submit"></asp:Button>
 				           </label>
