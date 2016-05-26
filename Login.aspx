@@ -9,8 +9,8 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="Body" Runat="Server">
     <%--<div class="LoginContainer">--%>
     <div class="login-right">
-	<div class="container">
-		<h3>Login</h3>
+	<div class="container LoginContainer">
+		<h3><span class="glyphicon glyphicon-log-in"></span> Login</h3>
 		<div class="login-top">
 				<ul class="login-icons">
                     <li>
