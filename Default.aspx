@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="CategoriesMenu" runat="server">
-    <!--header-bottom-->
+	<!--header-bottom-->
 			<div class="banner-bottom-top">
 			<div class="container">
 			<div class="bottom-header">
@@ -73,7 +73,7 @@
 	<!--//header-bottom-->
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Slider" Runat="Server">
-    <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1140px;margin:0px auto 56px;">
+	<div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1140px;margin:0px auto 56px;">
 			<div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
 				<ul class="amazingslider-slides" style="display:none;">
 					<li>
@@ -104,7 +104,7 @@
 		</div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Body" Runat="Server">
-    <div class="content">
+	<div class="content">
 	<div class="content-grid">
 		<div class="container">
 			<!--<div style="position:relative;top:-62px">-->
