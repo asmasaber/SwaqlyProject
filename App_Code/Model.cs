@@ -228,13 +228,15 @@ public partial class User
 
     public int ID { get; set; }
     public string FirstName { get; set; }
-    public string ListName { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
     public Nullable<bool> IsMale { get; set; }
     public byte[] Photo { get; set; }
     public System.DateTime RegisterDate { get; set; }
     public Nullable<bool> IsRemoved { get; set; }
+    public string LastName { get; set; }
+    public string Question { get; set; }
+    public string Answer { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     public virtual ICollection<Advertisement> Advertisements { get; set; }

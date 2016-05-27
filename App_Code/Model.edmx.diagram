@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="aea3df69dd664ffea663c6e14ceeb66c" Name="Diagram1">
+      <Diagram DiagramId="aea3df69dd664ffea663c6e14ceeb66c" Name="Diagram1" ZoomLevel="80">
         <EntityTypeShape EntityType="PropertyFinderDBModel.Admin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PropertyFinderDBModel.AdOwner" Width="1.5" PointX="10.5" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="PropertyFinderDBModel.AdPhoto" Width="1.5" PointX="15" PointY="15.125" IsExpanded="true" />

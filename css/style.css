@@ -5106,6 +5106,9 @@ a.more {
 #lbl_Login{
 display:inline;    
 }
+#lbl_UserName{
+    display:inline;
+}
 
 #chk_RememberMe {
 display:inline;

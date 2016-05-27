@@ -8,8 +8,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="Slider" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Body" Runat="Server">
-    <%--<div class="LoginContainer">--%>
-   <br />
+    <br />
     <br />
      <div class="login-right">
 	<div class="container LoginContainer">
@@ -25,28 +24,44 @@
 				</ul>
             <div class="clearfix"> </div>
 				<div class="form-info">
-				
-						<asp:TextBox runat="server" ID="txtEmail" type="text" class="text" placeholder="Email Adress" required=""></asp:TextBox>
-						<asp:TextBox runat="server" ID="txtPassword" type="password"  placeholder="Password" required=""></asp:TextBox>
-                    <div class="checkboxFive">
-                    <asp:CheckBox ID="chk_RememberMe" type="checkbox" runat="server" />
+                        <div runat="server" id="div_ErrorEmailaOrPassword" visible="false" class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            Invalid email or password
+                        </div>
+						<asp:TextBox runat="server" ID="txt_Email" type="text" class="text" placeholder="Email Adress" required=""></asp:TextBox>
+						<asp:TextBox runat="server" ID="txt_Password" type="password"  placeholder="Password" required=""></asp:TextBox>
+                    <div class="row">
+                        <div class="col-sm-4">
+                        <asp:CheckBox ID="chk_RememberMe" type="checkbox" runat="server" />
                     <asp:Label ID="lbl_RememberMe" runat="server" Text="Remember me"></asp:Label>	
                     </div>
+                         <div class="col-sm-4"></div>
+                 <div class="col-sm-4">
+                     <asp:LinkButton ID="lbtn_ForgetPassword" runat="server">Forget your password ?</asp:LinkButton>
+                 </div>
+                    </div>
+
+
                     <div class="col-sm-4"></div> 
                         <label class="col-sm-4 hvr-sweep-to-right">
-				           	<asp:Button runat="server" ID="btnLogin" Text="Login" type="submit"></asp:Button>
+				           	<asp:Button runat="server" ID="btn_Login" Text="Login" type="submit" OnClick="btn_Login_Click"></asp:Button>
 				           </label>
                     <div class="col-sm-4"></div> 
 					
 				</div>
-			<div class="create">
-                <asp:LinkButton ID="lbtnCreateAccount" runat="server" class="hvr-sweep-to-right">Create an Account</asp:LinkButton>
-				<div class="clearfix"> </div>
+			<div class="create row">
+                <div class="col-sm-4"></div> 
+                <div class="col-sm-4"></div> 
+                <div class="col-sm-4">
+                <asp:LinkButton ID="lbtn_CreateAccount" runat="server" class="hvr-sweep-to-right">Create an Account</asp:LinkButton>
+				</div>
+                
+                    <div class="clearfix"> </div>
 			</div>
 	</div>
     </div>
-     
-</div>
+     </div>
       <br />
     <br />
 </asp:Content>

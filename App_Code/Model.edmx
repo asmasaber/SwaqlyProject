@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PropertyFinderDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PropertyFinderDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admin">
           <Key>
             <PropertyRef Name="ID" />
@@ -148,13 +148,15 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="15" Nullable="false" />
-          <Property Name="ListName" Type="nvarchar" MaxLength="15" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="15" />
           <Property Name="Email" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="30" Nullable="false" />
           <Property Name="IsMale" Type="bit" />
           <Property Name="Photo" Type="varbinary(max)" />
           <Property Name="RegisterDate" Type="datetime" StoreGeneratedPattern="Computed" Nullable="false" />
           <Property Name="IsRemoved" Type="bit" />
+          <Property Name="Question" Type="nvarchar" MaxLength="100" />
+          <Property Name="Answer" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="UserContacts">
           <Key>
@@ -465,8 +467,7 @@
             <End Role="UserContacts" EntitySet="UserContacts" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PropertyFinderDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -628,7 +629,6 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="ListName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="IsMale" Type="Boolean" />
@@ -641,6 +641,9 @@
           <NavigationProperty Name="SoldProperties" Relationship="Self.FK_SoldProperty_User1" FromRole="User" ToRole="SoldProperty" />
           <NavigationProperty Name="UserContacts" Relationship="Self.FK_UserContacts_User" FromRole="User" ToRole="UserContacts" />
           <NavigationProperty Name="Properties1" Relationship="Self.FavoriteList" FromRole="User" ToRole="Property" />
+          <Property Name="LastName" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Question" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Answer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="UserContact">
           <Key>
@@ -1074,9 +1077,11 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="PropertyFinderDBModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Answer" ColumnName="Answer" />
+                <ScalarProperty Name="Question" ColumnName="Question" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="ListName" ColumnName="ListName" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="IsMale" ColumnName="IsMale" />

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Neifbahar\Documents\GitHub\SwaqlyProject\App_Code\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'F:\iTi SD_intake_36 Assiut 9Month\GraduationProject\2-Sprint_2\GitHubProject\SwaqlyProject\App_Code\Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
