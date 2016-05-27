@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+     <title>Home</title>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="CategoriesMenu" runat="server">
 	<!--header-bottom-->
