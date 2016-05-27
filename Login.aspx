@@ -9,7 +9,9 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="Body" Runat="Server">
     <%--<div class="LoginContainer">--%>
-    <div class="login-right">
+   <br />
+    <br />
+     <div class="login-right">
 	<div class="container LoginContainer">
 		<h3><span class="glyphicon glyphicon-log-in"></span> Login</h3>
 		<div class="login-top">
@@ -28,7 +30,7 @@
 						<asp:TextBox runat="server" ID="txtPassword" type="password"  placeholder="Password" required=""></asp:TextBox>
                     <div class="checkboxFive">
                     <asp:CheckBox ID="chk_RememberMe" type="checkbox" runat="server" />
-                    <asp:Label ID="lbl_RememberMe" runat="server" Text="RememberMe"></asp:Label>	
+                    <asp:Label ID="lbl_RememberMe" runat="server" Text="Remember me"></asp:Label>	
                     </div>
                     <div class="col-sm-4"></div> 
                         <label class="col-sm-4 hvr-sweep-to-right">
@@ -45,6 +47,6 @@
     </div>
      
 </div>
-        <%--</div>--%>
+      <br />
+    <br />
 </asp:Content>
-

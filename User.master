@@ -27,7 +27,20 @@
 <meta name="keywords" content="Real Home Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<style>
+	<script src="icheck.min.js"></script>
+    <link href="skins/minimal/blue.css" rel="stylesheet" />
+
+    <script>
+        $(document).ready(function () {
+            $('input').iCheck({
+                checkboxClass: 'icheckbox_minimal-blue',
+                radioClass: 'iradio_futurico-futurico',
+                increaseArea: '20%' // optional
+            });
+        });
+    </script>
+    <style>
+    <style>
 		.carousel-inner > .item > img,
 		.carousel-inner > .item > a > img {
 			width: 70%;
@@ -50,7 +63,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body style="background-image:url('../images/carbon_fibre.png');height:800px !important">
+<body style="background-image:url('../images/carbon_fibre.png')">
     <form id="form1" runat="server">
 <!--header-->
 	<div class="navigation">
@@ -254,7 +267,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//header-->
 <!--content-->
         <asp:ContentPlaceHolder ID="Body" runat="server"></asp:ContentPlaceHolder>
-		<br />
+	
 <!--footer-->
 <div class="footer">
 	<div class="container">
