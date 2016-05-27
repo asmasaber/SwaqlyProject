@@ -12,22 +12,32 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="Body" runat="Server">
 
     <div class="login-right">
-        <div class="container">
+        <div class="container LoginContainer">
             <h3>Register</h3>
             <div class="login-top">
                 <div class="clearfix"></div>
 
                 <div class="form-info">
 
-                    <asp:TextBox runat="server" ID="txtFirstName" type="text" class="text" placeholder="First Name" required=""></asp:TextBox>
-                    <asp:TextBox runat="server" ID="txtLastName" type="text" placeholder="Last Name" required=""></asp:TextBox>
-                    <asp:RadioButtonList ID="RBLGender" runat="server">
-                        <asp:ListItem>Female</asp:ListItem>
-                        <asp:ListItem>Male</asp:ListItem>
-                    </asp:RadioButtonList>
+                    <div class="row">
+                        <div class="col-lg-10">
+                            <asp:TextBox runat="server" ID="txtFirstName" type="text" class="text" placeholder="First Name" required=""></asp:TextBox>
+                            <asp:TextBox runat="server" ID="txtLastName" type="text" placeholder="Last Name" required=""></asp:TextBox>
+                        </div>
+                        <div class="col-lg-2">
+                            <asp:Image runat="server" ID="ImgUser" src="images/Person.png" alt="..." class="img-circle" Width="105%" Height="100%"/>
+                        </div>
+                    </div>
+                                        
+                    <div style="padding-left:18px">
+                        <asp:RadioButtonList ID="RBLGender" runat="server" class="radio">
+                            <asp:ListItem>Female</asp:ListItem>
+                            <asp:ListItem>Male</asp:ListItem>
+                        </asp:RadioButtonList>
+                    </div>
+
                     <asp:TextBox runat="server" ID="txtEmail" type="text" class="text" placeholder="Email Adress" required=""></asp:TextBox>
 				    <asp:TextBox runat="server" ID="txtPassword" type="password"  placeholder="Password" required=""></asp:TextBox>
-						
 
                     <div class="col-sm-4"></div>
                     <label class="col-sm-4 hvr-sweep-to-right">
