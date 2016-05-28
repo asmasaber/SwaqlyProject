@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
 public partial class Login : System.Web.UI.Page
 {
     BLL bll = new BLL();
@@ -24,6 +23,7 @@ public partial class Login : System.Web.UI.Page
 
     protected void btn_Login_Click(object sender, EventArgs e)
     {
+
         bool checkLogin = bll.CheckLogin(txt_Email.Text, txt_Password.Text);
         if (checkLogin)
         {
